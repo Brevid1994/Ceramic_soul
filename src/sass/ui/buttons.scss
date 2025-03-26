@@ -25,6 +25,19 @@
     }
 }
 
+.btn-footer {
+    margin-top: 30px;
+    padding: 0;
+    width: 90px;
+    border: 1px solid $light;
+    color: $light;
+
+    &:disabled {
+        color: $ui-disabled;
+        border: 1px solid $ui-disabled;
+    }
+}
+
 @media screen and (min-width: 1200px) {
     .btn-default {
         &:hover {
@@ -50,6 +63,18 @@
         &:hover {
             color: $ceramic;
             border: 1px solid $ceramic;
+        }
+    }
+
+    .btn-footer {
+        &:active {
+            border: 1px solid $light;
+            color: $light;
+        }
+
+        &:hover {
+            border: 1px solid $light;
+            color: $light;
         }
     }
 }

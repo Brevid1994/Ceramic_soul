@@ -22,6 +22,7 @@ try {
             nextEl: ".icon-right-open",
             prevEl: ".icon-left-open",
         },
+
         breakpoints: {
             // when window width is >= 1200px
             1200: {
@@ -29,8 +30,10 @@ try {
                 spaceBetween: 5,
             },
             1920: {
+                slidesPerView: 3,
                 spaceBetween: 35,
             },
+
         },
         modules: [Navigation, Pagination],
 
