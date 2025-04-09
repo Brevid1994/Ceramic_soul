@@ -23,3 +23,25 @@
     background-color: transparent;
     cursor: pointer;
 }
+
+@mixin lines {
+
+    &::before,
+    &::after {
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        content: '';
+        background-color: #000;
+    }
+
+    &::before {
+        width: 1px;
+        height: 200px;
+    }
+
+    &::after {
+        width: 200px;
+        height: 1px;
+    }
+}

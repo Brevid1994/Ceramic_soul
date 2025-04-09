@@ -1,0 +1,138 @@
+@use '/src/sass/base/variables.scss' as *;
+@use '/src/sass/base/mixins.scss' as *;
+
+.blog {
+    padding-top: 50px;
+
+    &__title {
+        margin-top: 60px;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        margin-bottom: 60px;
+        margin-top: 60px;
+
+    }
+
+    &__triggers {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 25px;
+        margin-top: 25px;
+        padding: 0px 25px;
+    }
+
+    &__card {
+        border: 1px solid $dark;
+        background-color: $light;
+        box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.25);
+    }
+
+    &__img {
+        img {
+            width: 100%;
+            object-fit: cover;
+            max-inline-size: calc(100% + 2px);
+            transform: translateX(-1px) translateY(-1px);
+        }
+    }
+
+    &__subtitle {
+        text-align: left;
+    }
+
+    &__text {
+        margin-top: 25px;
+        padding: 0px 25px 25px 25px;
+        font-weight: $main_text_m;
+        font-size: 16px;
+        font-style: normal;
+        line-height: normal;
+        color: $dark;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .blog {
+
+        &__wrapper {
+            position: relative;
+            padding: 25px 25px 0 25px;
+
+            @include lines;
+
+            &:before,
+            &:after {
+                top: 10px;
+                left: 10px;
+            }
+        }
+
+        &__card {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        &__data {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        &__triggers {
+            gap: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        &__text {
+            margin-top: 15px;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .blog {
+        &__wrapper {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            column-gap: 50px;
+        }
+
+        &__card {
+            width: 47%;
+        }
+
+        &__data {
+            height: 240px;
+        }
+
+        &__img {
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .blog {
+        &__title {
+            margin-top: 100px;
+        }
+
+        &__card {
+            min-height: 375px;
+        }
+
+        &__triggers {
+            padding: 0 22px;
+        }
+    }
+}

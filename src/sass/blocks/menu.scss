@@ -1,0 +1,72 @@
+@use '/src/sass/base/variables.scss' as *;
+
+.header {
+    &__menu {
+        padding: 50px 10px;
+        position: fixed;
+        top: 0;
+        left: -100vw;
+        width: 100vw;
+        height: 100vh;
+        background-color: $light;
+        transition: transform 0.5s;
+        opacity: 0;
+        z-index: 100;
+
+        &_active {
+            transform: translateX(100%);
+            opacity: 1;
+        }
+
+        &-close {
+            width: 20px;
+            height: 20px;
+
+            span {
+                display: block;
+                width: 21.5px;
+                height: 1px;
+                background-color: $dark;
+
+                &:nth-child(1) {
+                    transform: translateY(8px) rotate(45deg);
+                }
+
+                &:nth-child(2) {
+                    transform: translateY(8px) rotate(-45deg);
+                }
+            }
+        }
+
+        &-nav {
+            margin-top: 50px;
+            padding-left: 24px;
+        }
+
+        &-list {
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            row-gap: 25px;
+            list-style-type: none;
+        }
+
+        &-link {
+            font-size: 20px;
+            font-weight: $main_text_m;
+            color: $dark;
+            font-style: normal;
+            line-height: normal;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .header {
+        &__menu {
+            display: none;
+        }
+    }
+}
