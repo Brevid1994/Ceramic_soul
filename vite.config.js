@@ -11,6 +11,8 @@ export default defineConfig({
                 main: resolve(__dirname, 'index.html'),
                 catalog: resolve(__dirname, 'catalog.html'),
                 blog: resolve(__dirname, 'blog.html'),
+                about: resolve(__dirname, 'about.html'),
+
 
 
                 // nested: resolve(__dirname, 'nested/index.html'),
